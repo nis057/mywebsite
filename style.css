@@ -39,7 +39,7 @@ p {
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
-	text-align: center;
+	text-align:center;
 }
 .section-title span {
 	color: crimson;
@@ -381,7 +381,7 @@ p {
 	overflow: hidden;
 	position: relative;
 }
-#projects .project-img:after {
+/* #projects .project-img:after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -390,7 +390,7 @@ p {
 	width: 100%;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	opacity: 0.7;
-}
+} */
 #projects .project-img img {
 	transition: 0.3s ease transform;
 }
@@ -400,52 +400,83 @@ p {
 /* End Projects section */
 
 /* About Section */
-#about .about {
-	flex-direction: column-reverse;
+
+#centered-about {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 	text-align: center;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 100px 20px;
-}
-#about .col-left {
-	width: 250px;
-	height: 360px;
-}
-#about .col-right {
-	width: 100%;
-}
-#about .col-right h2 {
-	font-size: 1.8rem;
-	font-weight: 500;
-	letter-spacing: 0.2rem;
-	margin-bottom: 10px;
-}
-#about .col-right p {
-	margin-bottom: 20px;
-}
-#about .col-right .cta {
-	color: black;
-	margin-bottom: 50px;
+  }
+  
+  .centered-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  }
+  
+  .centered-content {
+	max-width: 600px; 
+  }
+  
+  .section-title span {
+	color: crimson; 
+  }
+  .section-title span:hover{
+	color: rgb(228, 111, 2); 
+  }
+  
+  .cta {
+	display: inline-block;
+	margin-top: 20px;
 	padding: 10px 20px;
-	font-size: 2rem;
-}
-#about .col-left .about-img {
-	height: 100%;
-	width: 100%;
-	position: relative;
-	border: 10px solid white;
-}
-#about .col-left .about-img::after {
-	content: '';
-	position: absolute;
-	left: -33px;
-	top: 19px;
-	height: 98%;
-	width: 98%;
-	border: 7px solid crimson;
-	z-index: -1;
-}
+	background-color:crimson;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+  }
+  .cta:hover
+  {
+	background-color: white;
+	color: crimson;
+  }
 /* End About Section */
+
+
+/*skills*/
+
+#skills h1
+{
+	text-align: center;
+	font-size: 5.2rem;
+	text-transform: uppercase;
+	padding: 10px;
+}
+.skill-icons {
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+	padding: 20px;
+    margin: 20px auto;
+}
+
+.skill-icons img {
+	padding: 20px;
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease;
+}
+
+.skill-icons img:hover {
+    transform: scale(1.2);
+
+}
+
+
 
 /* contact Section */
 #contact .contact {
